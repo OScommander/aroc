@@ -184,8 +184,6 @@ download_busybox () {
   
 # Since there doesn't appear to be a built-in zip uncompresser available on the command line, if we need to download SuperSU,
 # we download BusyBox in order to unzip it. We could also install BusyBox in Android w/ its symlinks later, if we want.
-
-if [ ! -e /usr/local/bin/busybox ]; then
   echo "Downloading BusyBox"
   mkdir -p /usr/local/bin
   cd /usr/local/bin
@@ -211,7 +209,6 @@ if [ ! -e /usr/local/bin/busybox ]; then
   
   fi
   chmod a+rx /usr/local/bin/busybox
-fi
 
 }
 
