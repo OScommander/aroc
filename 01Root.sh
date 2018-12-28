@@ -184,6 +184,7 @@ download_busybox () {
 # Since there doesn't appear to be a built-in zip uncompresser available on the command line, if we need to download SuperSU,
 # we download BusyBox in order to unzip it. We could also install BusyBox in Android w/ its symlinks later, if we want.
 
+if [ ! -e /usr/local/bin/busybox ]; then
   echo "Downloading BusyBox"
   mkdir -p /tmp/aroc
   cd /tmp/aroc
@@ -196,7 +197,8 @@ download_busybox () {
 
 # Commenting out the x64 Intel version for now as most x64 systems still seem to use a 32 bit Android container.
 # So if we use the 32 bit BusyBox here, copying it to Android should also work on all machines.
-     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-x86_64 -o busybox
+#     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-x86_64 -o busybox
+     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-i686 -o busybox
 
     else
      echo "Error!"
@@ -212,6 +214,7 @@ download_busybox () {
   mkdir -p /usr/local/bin
   mv busybox /usr/local/bin/busybox
   chmod a+x /usr/local/bin/busybox
+fi
 
 }
 
