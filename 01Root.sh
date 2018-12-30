@@ -150,7 +150,8 @@ echo
 
 # Since the raw rootfs has increased in size lately, create a blank sparse 2GB image, which should takes only as much space on disk as required.
 
-if [ "$ANDROID_ARCH"="armv7" ]; then
+if [ "$ANDROID_ARCH"="armv7" ]
+then
 
   echo "Creating armv7 img"
   echo
@@ -158,7 +159,8 @@ if [ "$ANDROID_ARCH"="armv7" ]; then
   dd if=/dev/zero of=system.raw.expanded.img count=2200000 bs=1024 status=progress
   else
 
-  if [ "$ANDROID_ARCH"="x86" ]; then
+  if [ "$ANDROID_ARCH"="x86" ]
+  then
 
 	echo "Creating x86 img"
 	echo
