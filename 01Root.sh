@@ -202,8 +202,8 @@ download_busybox () {
 
 # Commenting out the x64 Intel version for now as most x64 systems still seem to use a 32 bit Android container.
 # So if we use the 32 bit BusyBox here, copying it to Android should also work on all machines.
-#     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-x86_64 -o busybox
-     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-i686 > busybox
+     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-x86_64 -o busybox
+#     curl https://busybox.net/downloads/binaries/1.26.2-defconfig-multiarch/busybox-i686 > busybox
 
     else
      echo "Error!"
