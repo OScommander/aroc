@@ -115,7 +115,7 @@ detect_architecture() {
 #fi
 case "$ARCH" in
 x86 | i?86) ANDROID_ARCH="x86";;
-x86x86_64 | amd64) ANDROID_ARCH="x86";;
+x86_64 | amd64) ANDROID_ARCH="x86";;
 armel) ANDROID_ARCH="armel";;
 arm64 | aarch64) ANDROID_ARCH="armv7";;
 arm*) ANDROID_ARCH="armv7";;
